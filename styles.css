@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open sans", sans-serif;
+  font-weight: 600;
+}
+
+body {
+  /* height: 100vh;
+  background-color: white;
+  background-image: url(Images/background.jpg);
+  background-size: cover;
+  background-position: center; */
+  height: 100vh;
+  margin: 0;
+}
+/* background */
+.bg {
+  /* The image used */
+  /* background-image: url(img/background.jpg); */
+  /* Full height */
+  height: 100vh;
+  /* Center and scale  */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Change the background colour on hover */
+a:hover {
+  color: lightgrey;
+}
+
+/* HEADER */
+
+header {
+  position: top;
+  /* padding: 1rem; */
+}
+
+/* Style the header */
+.navbar {
+  width: 100%;
+  height: 70%;
+  max-width: 1200px;
+  line-height: 25mm;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+/* Style the header links */
+.navbar .logo a {
+  padding-left: 1rem;
+  font-size: large;
+  font-weight: 600;
+}
+
+/* Style the logo link */
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .toggle_btn {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  padding-right: 1rem;
+}
+
+.navbar input[type="text"] {
+  background-color: white;
+  color: black;
+  padding: 0.3rem 0.7rem;
+  margin-right: 10px;
+  border: none;
+  outline: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Open sans", sans-serif;
+}
+
+/* dropdown menu in small view*/
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 200px;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-top: 20px;
+}
+.dropdown_menu.open {
+  height: 240px;
+}
+
+.dropdown_menu li {
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* RESPONSIVE WEBSITE */
+
+/* if screen is large then show navbar  */
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .action_btn,
+  .navbar .input[type="text"] {
+    display: none;
+  }
+  .navbar .toggle_btn {
+    display: block;
+  }
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+/* if screen size is small then don't show navbar, show dropdown_menu */
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+}
+
+div.scroll-container {
+  background-color: white;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 5px;
+  width: 600px;
+  height: 400px;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  z-index: 0;
+  font-size: small;
+}
+
+/* Dropdown content apperance */
+.dropdown-content a {
+  float: none;
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding-left: 10px;
+  line-height: 50px;
+}
+
+/* Add a background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown_menu .action_btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 1rem;
+  width: 70%;
+  font-size: medium;
+}
+
+.main-destinations {
+  display: grid;
+  border: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+  align-items: center;
+  gap: 2rem;
+}
+.hov-img img {
+  width: 100%;
+  height: auto;
+  /* border-radius: 10px; */
+}
+
+/* Newsletter */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+  padding: 2.5rem;
+  border-style: solid;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}
+
+form h4 {
+  font-family: Helvetica;
+  font-size: x-large;
+  margin-bottom: 1rem;
+}
+.form-button {
+  margin-top: 0.8rem;
+  width: 100px;
+  font-size: medium;
+}
+
+.placeholder-form {
+  margin-top: 0.5rem;
+  width: 200px;
+  text-align: center;
+  font-size: medium;
+}
+
+.about {
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: 300px 1fr;
+  gap: 1rem;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* FOOTER */
+footer {
+  background-color: lightgrey;
+  color: black;
+  padding: 1rem;
+}
